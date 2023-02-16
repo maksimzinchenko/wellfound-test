@@ -2,6 +2,9 @@ FROM python:slim
 
 RUN useradd microblog
 
+RUN apt-get update
+RUN apt-get install --reinstall build-essential -y
+
 WORKDIR /home/microblog
 
 COPY requirements.txt requirements.txt
